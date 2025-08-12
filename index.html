@@ -7,6 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Qianhui Cao's Resume</title>
         <!--<link rel="stylesheet" href="styles.css">--> 
+        
+        <!-- HTML2PDF Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 
 
@@ -23,6 +26,7 @@
         <button onclick="showSection('law1')">法律背景</button>
         <button onclick="showSection('engineering1')">工程背景</button>
         <button onclick="showSection('film1')">影视制作</button>
+        <button onclick="exportToPDF()" class="export-btn">📄 Export PDF</button>
     </div>
 
 
@@ -42,141 +46,157 @@
             
             <!-- Education -->
             <h3>Education</h3>
+            <div class="work-entry">
             <p class="alignment">
                 <span class="left">2024.02 - 2028.11 （Currently Enrolled）</span>
                 <span class="middle">University of Sydney</span>
                 <span class="right">Sydney, Australia</span>
             </p>
-
-            <h7><b>Bachelor of Laws and Bachelor of Engineering with Honors (Mechatronics)</h7></b>
+            
+            <h7><b> Bachelor of Laws and Bachelor of Engineering with Honors (Mechatronics)</b></h7>
         
             <p><h7><b>Law Studies:</b> Legal Foundations, Contract Law, Civil & Criminal Procedure, Torts, Legal Research</h7></p>
-            <p><h7><b>Engineering Studies:</b> Advanced Mathematics, Mechatronics & Systems Design, Engineering Mechanics & Analysis, Computing & Professional Development</h7></p>
-
+            <p><h7><b>Engineering Studies:</b> Advanced Statistics and Calculus, Mechatronics & Systems Design, Engineering Mechanics & Analysis, Computing & Professional Development</h7></p>
+        </div>
             <p class="alignment">
                 <span class="left">2020.01 – 2023.12</span>
                 <span class="middle">Bethlehem College</span>
                 <span class="right">Bay of Plenty, New Zealand</span>
             </p>
             <h7><b>ATAR score: 98.0; </h7></b>
-            <h7>Courses: Mathematics, Physics, Chemistry, Economics, Computer Science, English Literature, Physical Education</h7>
+            <h7>Courses: Statistics and Calculus, Physics, Chemistry, Economics, Computer Science, English Literature, Physical Education</h7>
             
             
             <!-- Experience -->
             <h3>Work Experience</h3>
 
             <!-- Photographer -->
-            <p class="alignment">
-                <span class="left">2025.01 - Present</span>
-                <span class="middle">Freelance Photography</span>
-                <span class="right">Sydney, Australia</span>
-            </p>
-            <h7><b>Photographer</h7></b>
-            <ul>
-                <li>Provided professional photography services for events, portraits, and commercial projects.</li>
-                <li>Managed client relationships and project timelines to deliver high-quality results.</li>
-                <li>Utilized advanced photography techniques and post-processing skills.</li>
-                <li>Collaborated with clients to understand their vision and exceed expectations.</li>
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2025.01 - Present</span>
+                    <span class="middle">Commercial Photography</span>
+                    <span class="right">Sydney, Australia</span>
+                </p>
+                <h7><b>Commercial Photographer</h7></b>
+                <ul>
+                    <li>Specialized in commercial photography for companies, celebrities, and high-profile events.</li>
+                    <li>Provided professional photography services for brand campaigns, corporate events, and influencer content.</li>
+                    <li>Managed high-profile client relationships including celebrities and major brands.</li>
+                    <li>Delivered premium visual content for marketing campaigns and social media platforms.</li>
+                    <li>Utilized advanced photography techniques and post-processing for commercial-grade results.</li>
+                </ul>
+            </div>
 
             <!-- LCG -->
-            <p class="alignment">
-                <span class="left">2024.10 - 2025.02</span>
-                <span class="middle">Leading Capital Group</span>
-                <span class="right">Sydney, Australia</span>
-            </p>
-            <h7><b>Investment Consultant</h7></b>
-            <ul>
-                <li>Researched and analyzed property market trends, demographics, and growth areas.</li>
-                <li>Prepared detailed investment reports, including forecasts and ROI analysis.</li>
-                <li>Developed marketing strategies to promote investment properties to potential buyers.</li>
-                <li>Organized property viewings and presentations for prospective investors.</li>
-                <li>Built and maintained relationships with clients, real estate agents, and developers.</li>
-
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2024.10 - 2025.02</span>
+                    <span class="middle">Leading Capital Group</span>
+                    <span class="right">Sydney, Australia</span>
+                </p>
+                <h7><b>Investment Consultant</h7></b>
+                <ul>
+                    <li>Researched and analyzed property market trends, demographics, and growth areas.</li>
+                    <li>Prepared detailed investment reports, including forecasts and ROI analysis.</li>
+                    <li>Developed marketing strategies to promote investment properties to potential buyers.</li>
+                    <li>Organized property viewings and presentations for prospective investors.</li>
+                    <li>Built and maintained relationships with clients, real estate agents, and developers.</li>
+                </ul>
+            </div>
 
             <!--Ou Yang & Lee Law-->
-            <p class="alignment">
-                <span class="left">2024.10 - Present</span>
-                <span class="middle">Ou Yang & Lee Law</span>
-                <span class="right">Sydney, Australia</span>
-            </p>
-            <h7><b>Law Firm Intern</h7></b>
-            <ul>
-            <li>Researched and analyzed in Property, Migration, Employment, and Criminal Law legal areas.</li>
-            <li>Conducted legal research on statutes, case law, and precedents to support case preparation.</li>
-            <li>Participated in client interviews and consultations to gather case facts and clarify legal queries.</li>
-            <li>Prepared and reviewed contracts for the sale and purchase of property.</li>
-            <li>Researched and analyzed workplace disputes, dismissal claims, and contracts.</li>
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2024.10 - 2025.04</span>
+                    <span class="middle">Ou Yang & Lee Law</span>
+                    <span class="right">Sydney, Australia</span>
+                </p>
+                <h7><b>Law Firm Intern</h7></b>
+                <ul>
+                <li>Researched and analyzed in Property, Migration, Employment, and Criminal Law legal areas.</li>
+                <li>Conducted legal research on statutes, case law, and precedents to support case preparation.</li>
+                <li>Participated in client interviews and consultations to gather case facts and clarify legal queries.</li>
+                <li>Prepared and reviewed contracts for the sale and purchase of property.</li>
+                <li>Researched and analyzed workplace disputes, dismissal claims, and contracts.</li>
+                </ul>
+            </div>
 
 
             <!--扫毒风暴-->
-            <p class="alignment">
-                <span class="left">2024.06 – 2024.08</span>
-                <span class="middle">TV Series "扫毒风暴" (The Narcotic Operation) - Tencent Video/CCTV</span>
-                <span class="right">Guangdong, China</span>
-            </p>
-            <h7><b>Camera and Photography Assistant</b></h7>
-            <ul>
-                <li>Worked on major crime investigation TV series starring Duan Yihong and Qin Hao, directed by Wu Bai.</li>
-                <li>Assisted with professional camera equipment setup and operation, including tripods, dollies, and rigs.</li>
-                <li>Maintained and adjusted camera focus, lenses, and settings under DoP supervision.</li>
-                <li>Monitored camera movements during shoots to ensure smooth operation for broadcast quality.</li>
-                <li>Coordinated with lighting, sound, and set design departments for seamless production workflow.</li>
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2024.06 – 2024.08</span>
+                    <span class="middle">TV Series "扫毒风暴" (The Narcotic Operation) - Tencent Video/CCTV</span>
+                    <span class="right">Guangdong, China</span>
+                </p>
+                <h7><b>Camera and Photography Assistant</b></h7>
+                <ul>
+                    <li>Worked on major crime investigation TV series starring Duan Yihong and Qin Hao, directed by Wu Bai.</li>
+                    <li>Assisted with professional camera equipment setup and operation, including tripods, dollies, and rigs.</li>
+                    <li>Maintained and adjusted camera focus, lenses, and settings under DoP supervision.</li>
+                    <li>Monitored camera movements during shoots to ensure smooth operation for broadcast quality.</li>
+                    <li>Coordinated with lighting, sound, and set design departments for seamless production workflow.</li>
+                </ul>
+            </div>
 
 
 
 
             <!--ArcX limited-->
-            <p class="alignment">
-                <span class="left">2021.05 – 2023.12</span>
-                <span class="middle">ArcX Limited</span>
-                <span class="right">Bay of Plenty, New Zealand</span>
-            </p>
-            <h7><b>Founder and Coach</b></h7>
-            <ul>
-                <li>Founded and led a badminton coaching academy, mentoring over 250 students.</li>
-                <li>Provided personalized training plans to develop technical skills and game strategies.</li>
-                <li>Partnered with the Bay of Plenty badminton team to deliver official coaching support.</li>
-                <li>Managed day-to-day operations, including scheduling, budgeting, and marketing.</li>
-                <li>Promoted badminton in the region through outreach and community events.</li>
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2021.05 – 2023.12</span>
+                    <span class="middle">ArcX Limited</span>
+                    <span class="right">Bay of Plenty, New Zealand</span>
+                </p>
+                <h7><b>Founder and Coach</b></h7>
+                <ul>
+                    <li>Founded and led a badminton coaching academy, mentoring over 250 students.</li>
+                    <li>Provided personalized training plans to develop technical skills and game strategies.</li>
+                    <li>Partnered with the Bay of Plenty badminton team to deliver official coaching support.</li>
+                    <li>Managed day-to-day operations, including scheduling, budgeting, and marketing.</li>
+                    <li>Promoted badminton in the region through outreach and community events.</li>
+                </ul>
+            </div>
 
 
             <!--浴火之路-->
-            <p class="alignment">
-                <span class="left">2023.02 – 2023.04</span>
-                <span class="middle">Feature Film "浴火之路" (Tiger Wolf Road) - ¥461M Box Office Success</span>
-                <span class="right">Yunnan, China</span>
-            </p>
-            <h7><b>Production Coordinator</b></h7>
-            <ul>
-                <li>Coordinated major crime action film starring Xiao Yang, Zhao Liying, and Liu Ye, directed by Wu Bai.</li>
-                <li>Managed complex on-location logistics across Yunnan province for high-budget theatrical production.</li>
-                <li>Facilitated contract negotiations and financial oversight for ¥461 million box office achievement.</li>
-                <li>Coordinated with government authorities for filming permits in challenging terrain locations.</li>
-                <li>Optimized production schedules balancing A-list cast availability with location-dependent shooting requirements.</li>
-            </ul>
+            <div class="work-entry">
+                <p class="alignment">
+                    <span class="left">2023.02 – 2023.04</span>
+                    <span class="middle">Feature Film "浴火之路" (Tiger Wolf Road) - ¥461M Box Office Success</span>
+                    <span class="right">Yunnan, China</span>
+                </p>
+                <h7><b>Production Coordinator</b></h7>
+                <ul>
+                    <li>Coordinated major crime action film starring Xiao Yang, Zhao Liying, and Liu Ye, directed by Wu Bai.</li>
+                    <li>Managed complex on-location logistics across Yunnan province for high-budget theatrical production.</li>
+                    <li>Facilitated contract negotiations and financial oversight for ¥461 million box office achievement.</li>
+                    <li>Coordinated with government authorities for filming permits in challenging terrain locations.</li>
+                    <li>Optimized production schedules balancing A-list cast availability with location-dependent shooting requirements.</li>
+                </ul>
+            </div>
 
             <!--扫黑·决不放弃-->
-            <p class="alignment">
-                <span class="left">2021.11 – 2022.02</span>
-                <span class="middle">Crime Drama "扫黑·决不放弃" (Anti-Crime: Never Give Up) - National Distribution</span>
-                <span class="right">Yunnan, China</span>
-            </p>
-            <h7><b>Assistant Production Manager</b></h7>
-            <ul>
-                <li>Managed production operations for major anti-crime drama with national theatrical distribution.</li>
-                <li>Coordinated cross-departmental workflows ensuring seamless integration of cast, crew, and technical teams.</li>
-                <li>Handled strategic partnership negotiations and comprehensive financial reporting for multi-million production.</li>
-                <li>Orchestrated complex logistics including transportation, accommodation, and catering for 100+ crew members.</li>
-                <li>Collaborated directly with director and department heads to resolve production challenges and optimize shooting efficiency.</li>
-            </ul>
+
+                <p class="alignment">
+                    <span class="left">2021.11 – 2022.02</span>
+                    <span class="middle">Crime Movie "扫黑·决不放弃" (Anti-Crime: Never Give Up) - National Distribution</span>
+                    <span class="right">Yunnan, China</span>
+                </p>
+                <h7><b>Assistant Production Manager</b></h7>
+                <ul>
+                    <li>Managed production operations for major anti-crime drama with national theatrical distribution.</li>
+                    <li>Coordinated cross-departmental workflows ensuring seamless integration of cast, crew, and technical teams.</li>
+                    <li>Handled strategic partnership negotiations and comprehensive financial reporting for multi-million production.</li>
+                    <li>Orchestrated complex logistics including transportation, accommodation, and catering for 100+ crew members.</li>
+                    <li>Collaborated directly with director and department heads to resolve production challenges and optimize shooting efficiency.</li>
+                </ul>
+
             
 
             <!--Profile-->
+            <div class="work-entry">
             <h3>Profile</h3>
             <h7><b>Professional Skills</b></h7>
             <ul>
@@ -186,17 +206,21 @@
                 <li>HTML, Python, PHP, CSS, C, R</li>
                 <li>Project Management (Asana, Trello), Time Management</li>
             </ul>
+            </div>
             <!--Language-->
+
             <h7><b>Language</b></h7>
             <ul>
-            <li><h7>Native in Cantonese and Mandarin.</h7></li>
-            <li><h7>Fluent in English, with strong reading and writing skills.</h7></li>
+            <li>Native in Cantonese.</li>
+            <li>Fluent in Mandarin.</li>
+            <li>Fluent in English, with strong reading and writing skills.</li>
             </ul>
+
 
             <h3>Administration, Outreach, and Professional Service</h3>
             <!--ADA debate-->
             <p class="alignment">
-                <span class="left">2022.05 – 2024.08</span>
+                <span class="left">2022.05 – Present</span>
                 <span class="middle">ADA Debate Association</span>
                 <span class="right">China and New Zealand</span>
             </p>
@@ -208,21 +232,32 @@
                 <li>Organized over 60 online debate tournaments with clear rules and schedules.</li>
                 <li>Coordinated with judges, participants, and sponsors for smooth operations.</li>
             </ul>
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.06 - Present</span>
                 <span class="middle">University of Sydney Chinese Debate Society</span>
                 <span class="right">Sydney, Australia</span>
             </p>
-            <h7><b>Outreach & Internal Affairs</h7></b>
+            <h7><b>Internal & Outreach Officer</h7></b>
             <ul>
                 <li>Organized events to attract new members, including open days and introductory sessions.</li>
                 <li>Established partnerships with other student societies or external organizations for joint events.</li>
                 <li>Coordinated logistics for internal events, including room bookings and equipment setup.</li>
+                <li>Managed internal communications and administrative processes.</li>
             </ul>
 
+
+            <h7><b>Debate Team Member</h7></b>
+            <ul>
+                <li>Participated in competitive debate tournaments and competitions.</li>
+                <li>Developed argumentation skills and public speaking capabilities.</li>
+                <li>Collaborated with team members on research and strategy development.</li>
+            </ul>
+
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - Present</span>
-                <span class="middle">University of Sydney Student Union</span>
+                <span class="middle">Sydney University Chinese Students Association</span>
                 <span class="right">Sydney, Australia</span>
             </p>
             <h7><b>Entertainment Committee Member</h7></b>
@@ -231,7 +266,8 @@
                 <li>Collaborated with team members to plan large-scale university events.</li>
                 <li>Engaged with student community to understand entertainment preferences and needs.</li>
             </ul>
-
+            
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - Present</span>
                 <span class="middle">ACISC (Australian Chinese International Student Council)</span>
@@ -244,23 +280,63 @@
                 <li>Facilitated communication between international students and university services.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.10 - Present</span>
                 <span class="middle">University of Sydney Engineering International Students Association</span>
                 <span class="right">Sydney, Australia</span>
             </p>
-            <h7><b>Co-Founder & Outreach</h7></b>
+            <h7><b>Head of Outreach</h7></b>
             <ul>
                 <li>Developed the mission, vision, and structure of the association to address the needs of international engineering students.</li>
                 <li>Represented the association at university-wide events and fairs.</li>
                 <li>Planned and hosted professional development workshops (e.g., resume building, interview preparation).</li>
             </ul>
-        
 
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2025.08 - Present</span>
+                <span class="middle">University of Sydney Jacaranda Stock Market Society </span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>Secretary Department Member</h7></b>
+            <ul>
+                <li>Managed meeting minutes and official documentation for society meetings.</li>
+                <li>Coordinated internal communications and administrative tasks.</li>
+                <li>Supported organization of investment education workshops and networking events.</li>
+            </ul>
 
+            <h3>Competition & Awards</h3>
+            
+            <!-- Hackathon -->
+            <p class="alignment">
+                <span class="left">2024 - 2025</span>
+                <span class="middle">Hackathon Competitions</span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>University of Sydney Hackathon</b></h7>
+            <ul>
+                <li>Top 3 team in University of Sydney Hackathon competition 2025</li>
+                <li>Top 10 team in University of Sydney Hackathon competition 2024</li>
+            </ul>
 
-            <!--Sport-->
-            <h3>Sports Experience</h3>
+            <div class="work-entry"></div>
+            <!-- Moot Court -->
+            <p class="alignment">
+                <span class="left">2024.12</span>
+                <span class="middle">Moot Court Experience</span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>University of Sydney Law School Moot Court</b></h7>
+            <ul>
+                <li>Participated in University of Sydney Law School Moot Court competitions</li>
+                <li>Developed skills in legal argumentation, case analysis, and courtroom advocacy</li>
+                <li>Collaborated with team members on legal research and oral presentation strategies</li>
+            </ul>
+
+            <!-- Sports Achievements -->
+           <div class="work-entry"></div>
+            
             <p class="alignment">
                 <span class="left">2017.02 - Present</span>
                 <span class="middle">Badminton</span>
@@ -281,7 +357,9 @@
                 <li>Bronze Medalist at the 2022 National U17 Team Championships.</li>
                 <li>Silver Medalist at the 2019 National Junior Championships.</li>
                 <li>Member of the New Zealand National Junior Team at 2020.</li>
+            </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2017.02 - Present</span>
                 <span class="middle">Table Tennis</span>
@@ -294,6 +372,8 @@
                 <li>Captain of the Bethlehem College Badminton Team.</li>
                 <li>Member of the Bay of Plenty table tennis Teams</li>
             </ul>
+
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2020.02 - Present</span>
                 <span class="middle">Volleyball</span>
@@ -304,23 +384,40 @@
                 <li>Member of the Bethlehem College School volleyball A Team</li> 
                 <li>Top 8 at the National High School Volleyball Championship</li>
             </ul>
-        
+
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2017.02 - Present</span>
+                <span class="middle">Taekwondo</span>
+                <span class="right">New Zealand, China</span>
+            </p>
+            <h7><b>Achievements</b></h7>
+            <ul>
+                <li>Gold Medalist Champion in both Individual and Mixed Doubles at Guangzhou Youth Open Tournament</li>
+                <li>Silver Medalist at the National Youth Taekwondo Championship</li>
+            </ul>
+
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2017.02 - Present</span>
+                <span class="middle">Squash and Tennis</span>
+                <span class="right">New Zealand, China</span>
+            </p>
+            <h7><b>Achievements</b></h7>
+            <ul>
+                
+            <ul>
+                <li>Two times Silver Medalist in Tauranga Intermediate Squash Championship</li>
+                <li>Two times Silver Medalist in Tauranga Intermediate Tennis Championship</li>
+            </ul>
+
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2017.02 - Present</span>
                 <span class="middle">Other Achievements</span>
                 <span class="right">New Zealand, China</span>
             </p>
-
-            <h7><b>Taekwondo</b></h7>
             <ul>
-                <li>Gold Medalist Champion in both Individual and Mixed Doubles at Guangzhou Youth Open Tournament</li>
-                <li>Silver Medalist at the National Youth Taekwondo Championship</li>
-            </ul>
-            <h7><b>Squash & Tennis</b></h7>
-            <ul>
-                <li>Two times Silver Medalist in Tauranga Intermediate Squash Championship</li>
-                <li>Two times Silver Medalist in Tauranga Intermediate Tennis Championship</li>
-            </ul>
             <h7><b>Teams</b></h7>
             <ul>
                 <li>Bethlehem College basketball A team</li>
@@ -328,16 +425,6 @@
                 <li>Bethlehem College soccer B team</li>
                 <li>Tauranga Intermediate hockey A team</li>
             </ul>
-
-            <!--            
-            <h3>Lisence & Certificate</h3>
-            <h7><b>Honors and Achievement</b></h7>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>-->
         </div>
 
 
@@ -355,23 +442,26 @@
             </div>
             <h3>Work Experience</h3>
 
+
             <!-- Photographer -->
             <p class="alignment">
                 <span class="left">2025.01 - Present</span>
-                <span class="middle">Freelance Photography</span>
+                <span class="middle">Commercial Photography</span>
                 <span class="right">Sydney, Australia</span>
             </p>
-            <h7><b>Professional Photographer</b></h7>
+            <h7><b>Commercial Photographer</b></h7>
             <ul>
-                <li>Provided professional photography services for events, portraits, and commercial projects.</li>
-                <li>Managed client relationships and project timelines to deliver high-quality results.</li>
-                <li>Utilized advanced photography techniques and post-processing skills.</li>
-                <li>Collaborated with clients to understand their vision and exceed expectations.</li>
+                <li>Specialized in commercial photography for companies, celebrities, and high-profile events.</li>
+                <li>Provided professional photography services for brand campaigns, corporate events, and influencer content.</li>
+                <li>Managed high-profile client relationships including celebrities and major brands.</li>
+                <li>Delivered premium visual content for marketing campaigns and social media platforms.</li>
+                <li>Utilized advanced photography techniques and post-processing for commercial-grade results.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.06 – 2024.08</span>
-                <span class="middle">TV Series "扫毒风暴" (The Narcotic Operation) - Tencent Video/CCTV</span>
+                <span class="middle">TV Series "扫毒风暴" (The Narcotic Operation) - Tencent Video & CCTV</span>
                 <span class="right">Guangdong, China</span>
             </p>
             <h7><b>Camera and Photography Assistant</b></h7>
@@ -383,6 +473,7 @@
                 <li>Coordinated with lighting, sound, and set design departments for seamless production workflow.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2023.02 – 2023.04</span>
                 <span class="middle">Feature Film "浴火之路" (Tiger Wolf Road) - ¥461M Box Office Success</span>
@@ -397,6 +488,7 @@
                 <li>Optimized production schedules balancing A-list cast availability with location-dependent shooting requirements.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <!--扫黑·决不放弃-->
             <p class="alignment">
                 <span class="left">2021.11 – 2022.02</span>
@@ -428,21 +520,23 @@
             </div>
                 
             <h3>工作经历</h3>
-            
+
             <!-- 摄影师 -->
             <p class="alignment">
                 <span class="left">2025.01 - 至今</span>
-                <span class="middle">自由摄影</span>
+                <span class="middle">商业摄影</span>
                 <span class="right">悉尼, 澳大利亚</span>
             </p>
-            <h7><b>专业摄影师</b></h7>
+            <h7><b>商业摄影师</b></h7>
             <ul>
-                <li>为活动、肖像和商业项目提供专业摄影服务。</li>
-                <li>管理客户关系和项目时间表，交付高质量成果。</li>
-                <li>运用先进的摄影技术和后期处理技能。</li>
-                <li>与客户合作了解其愿景并超越期望。</li>
+                <li>专注为企业、名人和高端活动提供商业摄影服务。</li>
+                <li>为品牌推广活动、企业活动和网红内容提供专业摄影服务。</li>
+                <li>管理名人和大品牌等高端客户关系。</li>
+                <li>为营销活动和社交媒体平台提供优质视觉内容。</li>
+                <li>运用先进摄影技术和后期处理，达到商业级效果。</li>
             </ul>
             
+            <div class="work-entry"></div>
             <p class="alignment">
                     <span class="left">2024.06 - 2024.08</span>
                     <span class="middle">电视剧《扫毒风暴》- 腾讯视频/央视</span>
@@ -458,9 +552,10 @@
                 <li>与灯光、音响、布景设计部门协调，保证制作流程无缝衔接。</li>
             </ul>    
             
+            <div class="work-entry"></div>
             <p class="alignment">
                     <span class="left">2023.02 - 2023.04</span>
-                    <span class="middle">犯罪动作片《浴火之路》- 票房4.61亿元</span>
+                    <span class="middle">犯罪动作电影《浴火之路》- 票房4.61亿元</span>
                     <span class="right">云南, 中国</span>
                 </p>
                 <h7><b>制片协调员</b></h7>
@@ -472,10 +567,10 @@
                     <li>优化制作计划，平衡一线演员档期与依赖位置的拍摄要求。</li>
                 </ul>
 
-
+                <div class="work-entry"></div>
                 <p class="alignment">
                     <span class="left">2021.11 - 2022.02</span>
-                    <span class="middle">犯罪剧情片《扫黑·决不放弃》- 全国院线发行</span>
+                    <span class="middle">犯罪动作电影《扫黑·决不放弃》- 全国院线发行</span>
                     <span class="right">云南, 中国</span>
                 </p>
                 <h7><b>制片助理经理</b></h7>
@@ -515,7 +610,7 @@
             <h3>工作经历</h3>
             <!-- 欧阳与李律师事务所 -->
             <p class="alignment">
-                <span class="left">2024.10 - 至今</span>
+                <span class="left">2024.10 - 2025.04</span>
                 <span class="middle">Ou Yang & Lee律师事务所</span>
                 <span class="right">悉尼, 澳大利亚</span>
             </p>
@@ -528,10 +623,40 @@
                 <li>研究和分析工作场所争议、解雇索赔和合同问题。</li>
             </ul>
 
-            <h3>志愿者</h3>
+            <h3>竞赛与奖项</h3>
+            
+            <!-- 模拟法庭 -->
+            <p class="alignment">
+                <span class="left">2024.12</span>
+                <span class="middle">模拟法庭经历</span>
+                <span class="right">悉尼, 澳大利亚</span>
+            </p>
+            <h7><b>悉尼大学法学院模拟法庭</b></h7>
+            <ul>
+                <li>参与悉尼大学法学院模拟法庭竞赛</li>
+                <li>培养法律论证、案例分析和法庭辩护技能</li>
+                <li>与团队成员合作进行法律研究和口头陈述策略</li>
+            </ul>
+
+            <h3>学生组织与社会服务</h3>
+            
+            <!-- 蓝楹会 (Most recent, moved to top) -->
+            <p class="alignment">
+                <span class="left">2025.08 - 至今</span>
+                <span class="middle">悉尼大学蓝楹股票市场协会</span>
+                <span class="right">澳大利亚悉尼</span>
+            </p>
+            <h7><b>秘书部部员</b></h7>
+            <ul>
+                <li>管理协会会议的会议记录和官方文档。</li>
+                <li>协调内部沟通和行政任务。</li>
+                <li>支持组织投资教育研讨会和网络活动。</li>
+            </ul>
+
+            <div class="work-entry"></div>
             <!-- ADA辩论协会 -->
             <p class="alignment">
-                <span class="left">2022.05 – 2024.08</span>
+                <span class="left">2022.05 – 至今</span>
                 <span class="middle">ADA辩论协会</span>
                 <span class="right">中国与新西兰</span>
             </p>
@@ -544,9 +669,10 @@
                 <li>协调评委、参赛者和赞助商以确保活动顺利进行。</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - 至今</span>
-                <span class="middle">悉尼大学学生联会</span>
+                <span class="middle">悉尼大学中国学生会</span>
                 <span class="right">澳大利亚悉尼</span>
             </p>
             <h7><b>生娱部部员</b></h7>
@@ -556,6 +682,7 @@
                 <li>与学生社区互动，了解娱乐偏好和需求。</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - 至今</span>
                 <span class="middle">ACISC（澳洲中国留学生理事会）</span>
@@ -568,16 +695,42 @@
                 <li>促进留学生与大学服务部门之间的沟通。</li>
             </ul>
 
+
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.06 - 至今</span>
                 <span class="middle">悉尼大学中文辩论社</span>
                 <span class="right">澳大利亚悉尼</span>
             </p>
-            <h7><b>外联与内政</b></h7>
+            <h7><b>外联干事</b></h7>
             <ul>
                 <li>组织了吸引新成员的活动，包括开放日和入门讲座。</li>
                 <li>与其他学生社团或外部机构建立合作关系，共同举办活动。</li>
+            </ul>
+
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2024.06 - 至今</span>
+                <span class="middle">悉尼大学中文辩论社</span>
+                <span class="right">澳大利亚悉尼</span>
+            </p>
+            <h7><b>内政干事</b></h7>
+            <ul>
                 <li>协调内部活动的后勤工作，包括房间预订和设备准备。</li>
+                <li>管理内部沟通和行政流程。</li>
+            </ul>
+
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2024.02 - 至今</span>
+                <span class="middle">悉尼大学中文辩论社</span>
+                <span class="right">澳大利亚悉尼</span>
+            </p>
+            <h7><b>辩论队队员</b></h7>
+            <ul>
+                <li>参与竞技辩论锦标赛和比赛。</li>
+                <li>培养论证技能和公共演讲能力。</li>
+                <li>与团队成员合作进行研究和策略开发。</li>
             </ul>
         
             <h3>个人简介</h3>
@@ -589,11 +742,13 @@
                 <li>HTML、Python、PHP、CSS、C、R</li>
                 <li>项目管理（Asana、Trello），时间管理</li>
             </ul>
+            <div class="work-entry"></div>
             <!-- 语言能力 -->
             <h7><b>语言能力</b></h7>
             <ul>
-                <li><h7>母语：粤语和普通话</h7></li>
-                <li><h7>流利的英语，具备较强的阅读和写作能力。</h7></li>
+                <li><h7>粤语（母语）</h7></li>
+                <li><h7>普通话（流利，具备较强的阅读和写作能力）</h7></li>
+                <li><h7>英语（流利，具备较强的阅读和写作能力）</h7></li>
             </ul>
         </div>
         
@@ -624,7 +779,7 @@
             <h3>Experience</h3>
             <!--Ou Yang & Lee Law-->
             <p class="alignment">
-                <span class="left">2024.10 - Present</span>
+                <span class="left">2024.10 - 2025.04</span>
                 <span class="middle">Ou Yang & Lee Law</span>
                 <span class="right">Sydney, Australia</span>
             </p>
@@ -637,12 +792,28 @@
             <li>Researched and analyzed workplace disputes, dismissal claims, and contracts.</li>
             </ul>
 
+            <div class="work-entry"></div>
+            <h3>Competition & Awards</h3>
+            
+            <!-- Moot Court -->
+            <p class="alignment">
+                <span class="left">2024.12</span>
+                <span class="middle">Moot Court Experience</span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>University of Sydney Law School Moot Court</b></h7>
+            <ul>
+                <li>Participated in University of Sydney Law School Moot Court competitions</li>
+                <li>Developed skills in legal argumentation, case analysis, and courtroom advocacy</li>
+                <li>Collaborated with team members on legal research and oral presentation strategies</li>
+            </ul>
 
+            <div class="work-entry"></div>
             <h3>Administration, Outreach, and Professional Service</h3>
 
             <!--ADA debate-->
             <p class="alignment">
-                <span class="left">2022.05 – 2024.08</span>
+                <span class="left">2022.05 – Present</span>
                 <span class="middle">ADA Debate Association</span>
                 <span class="right">China and New Zealand</span>
             </p>
@@ -655,9 +826,10 @@
                 <li>Coordinated with judges, participants, and sponsors for smooth operations.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - Present</span>
-                <span class="middle">University of Sydney Student Union</span>
+                <span class="middle">Sydney University Chinese Students Association</span>
                 <span class="right">Sydney, Australia</span>
             </p>
             <h7><b>Entertainment Committee Member</h7></b>
@@ -667,6 +839,7 @@
                 <li>Engaged with student community to understand entertainment preferences and needs.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2025.01 - Present</span>
                 <span class="middle">ACISC (Australian Chinese International Student Council)</span>
@@ -679,6 +852,7 @@
                 <li>Facilitated communication between international students and university services.</li>
             </ul>
 
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.06 - Present</span>
                 <span class="middle">University of Sydney Chinese Debate Society</span>
@@ -691,7 +865,20 @@
                 <li>Coordinated logistics for internal events, including room bookings and equipment setup.</li>
             </ul>
 
+            <div class="work-entry"></div>
+            <p class="alignment">
+                <span class="left">2025.08 - Present</span>
+                <span class="middle">University of Sydney Jacaranda Stock Market Society</span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>Secretary Department Member</h7></b>
+            <ul>
+                <li>Managed meeting minutes and official documentation for society meetings.</li>
+                <li>Coordinated internal communications and administrative tasks.</li>
+                <li>Supported organization of investment education workshops and networking events.</li>
+            </ul>
 
+            <div class="work-entry"></div>
             <h3>Profile</h3>
             <h7><b>Professional Skills</b></h7>
             <ul>
@@ -702,11 +889,15 @@
                 <li>Project Management (Asana, Trello), Time Management</li>
             </ul>
             <!--Language-->
+            <div class="work-entry">
             <h7><b>Language</b></h7>
             <ul>
-            <li><h7>Native in Cantonese and Mandarin.</h7></li>
+            <li><h7>Native in Cantonese.</h7></li>
+            <li><h7>Fluent in Mandarin, with strong reading and writing skills.</h7></li>
             <li><h7>Fluent in English, with strong reading and writing skills.</h7></li>
             </ul>
+            </div>
+
 
 
         <!--
@@ -757,15 +948,15 @@
                     </p>
                     <h7><b>法学学士与荣誉工程学学士（机电一体化方向）</b></h7>
                     
-                    <p><h7><b>法律学习：</b>法律基础、合同法、民事与刑事程序、侵权法、法律研究</h7></p>
-                    <p><h7><b>工程学习：</b>高等数学、机电一体化与系统设计、工程力学与分析、计算机与专业发展</h7></p>
+                    <p><b>法律学习：</b>法律基础、合同法、民事与刑事程序、侵权法、法律研究</p>
+                    <p><b>工程学习：</b>高等统计学与微积分、机电一体化与系统设计、工程力学与分析、计算机与专业发展</p>
                     <p class="alignment">
                         <span class="left">2020.01 - 2023.12</span>
                         <span class="middle">伯利恒学院</span>
                         <span class="right">丰盛湾, 新西兰</span>
                     </p>
                     <h7><b>ATAR分数：98.0；</b></h7>
-                    <h7>课程：数学、物理、化学、经济学、计算机科学、英语文学、体育</h7>
+                    <h7>课程：统计学与微积分、物理、化学、经济学、计算机科学、英语文学、体育</h7>
                     
                     <!-- 工作经历 -->
                     <h3>工作经历</h3>
@@ -773,15 +964,16 @@
                     <!-- 摄影师 -->
                     <p class="alignment">
                         <span class="left">2025.01 - 至今</span>
-                        <span class="middle">自由摄影</span>
+                        <span class="middle">商业摄影</span>
                         <span class="right">悉尼, 澳大利亚</span>
                     </p>
-                    <h7><b>摄影师</b></h7>
+                    <h7><b>商业摄影师</b></h7>
                     <ul>
-                        <li>为活动、肖像和商业项目提供专业摄影服务。</li>
-                        <li>管理客户关系和项目时间表，交付高质量成果。</li>
-                        <li>运用先进的摄影技术和后期处理技能。</li>
-                        <li>与客户合作了解其愿景并超越期望。</li>
+                        <li>专注为企业、名人和高端活动提供商业摄影服务。</li>
+                        <li>为品牌推广活动、企业活动和网红内容提供专业摄影服务。</li>
+                        <li>管理名人和大品牌等高端客户关系。</li>
+                        <li>为营销活动和社交媒体平台提供优质视觉内容。</li>
+                        <li>运用先进摄影技术和后期处理，达到商业级效果。</li>
                     </ul>
 
                     <!-- Leading Capital Group -->
@@ -801,7 +993,7 @@
             
                     <!-- 欧阳与李律师事务所 -->
                     <p class="alignment">
-                        <span class="left">2024.10 - 至今</span>
+                        <span class="left">2024.10 - 2025.04</span>
                         <span class="middle">Ou Yang & Lee律师事务所</span>
                         <span class="right">悉尼, 澳大利亚</span>
                     </p>
@@ -876,10 +1068,10 @@
                         <li>与导演和部门主管直接合作，解决制作挑战并优化拍摄效率。</li>
                     </ul>
 
-                    <h3>志愿者</h3>
+                    <h3>学生组织与社会服务</h3>
                     <!-- ADA辩论协会 -->
                     <p class="alignment">
-                        <span class="left">2022.05 – 2024.08</span>
+                        <span class="left">2022.05 – 至今</span>
                         <span class="middle">ADA辩论协会</span>
                         <span class="right">中国与新西兰</span>
                     </p>
@@ -892,6 +1084,7 @@
                         <li>协调评委、参赛者和赞助商以确保活动顺利进行。</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2024.06 - 至今</span>
                         <span class="middle">悉尼大学中文辩论社</span>
@@ -904,9 +1097,10 @@
                         <li>协调内部活动的后勤工作，包括房间预订和设备准备。</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2025.01 - 至今</span>
-                        <span class="middle">悉尼大学学生联会</span>
+                        <span class="middle">悉尼大学中国学生会</span>
                         <span class="right">澳大利亚悉尼</span>
                     </p>
                     <h7><b>生娱部部员</b></h7>
@@ -916,6 +1110,7 @@
                         <li>与学生社区互动，了解娱乐偏好和需求。</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2025.01 - 至今</span>
                         <span class="middle">ACISC（澳洲中国留学生理事会）</span>
@@ -928,19 +1123,33 @@
                         <li>促进留学生与大学服务部门之间的沟通。</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2024.10 - 至今</span>
                         <span class="middle">悉尼大学国际工程学生协会</span>
                         <span class="right">澳大利亚悉尼</span>
                     </p>
-                    <h7><b>联合创始人与外联</b></h7>
+                    <h7><b>外联部部长</b></h7>
                     <ul>
                         <li>制定协会的使命、愿景和结构，以满足国际工程学生的需求。</li>
                         <li>在全校范围内的活动和展会上代表协会。</li>
                         <li>策划并举办职业发展研讨会（例如简历撰写和面试准备）。</li>
                     </ul>
 
+                    <div class="work-entry"></div>
+                    <p class="alignment">
+                        <span class="left">2025.08 - 至今</span>
+                        <span class="middle">悉尼大学蓝楹股票市场协会</span>
+                        <span class="right">澳大利亚悉尼</span>
+                    </p>
+                    <h7><b>秘书部部员</b></h7>
+                    <ul>
+                        <li>管理协会会议的会议记录和官方文档。</li>
+                        <li>协调内部沟通和行政任务。</li>
+                        <li>支持组织投资教育研讨会和网络活动。</li>
+                    </ul>
 
+                    <div class="work-entry"></div>
                     <!-- 个人技能 -->
                     <h3>个人简介</h3>
                     <h7><b>专业技能</b></h7>
@@ -955,13 +1164,42 @@
                     <!-- 语言能力 -->
                     <h7><b>语言能力</b></h7>
                     <ul>
-                        <li>母语：粤语和普通话</li>
-                        <li>英语流利，具有较强的阅读与写作能力</li>
+                        <li>粤语</li>
+                        <li>普通话</li>
+                        <li>英语</li>
                     </ul>
 
+                    <!-- 竞赛与奖项 -->
+                    <h3>竞赛与奖项</h3>
                     
-                    <!-- 体育经验 -->
-                    <h3>体育经历</h3>
+                    <!-- 黑客竞赛 -->
+                    <p class="alignment">
+                        <span class="left">2024 - 2025</span>
+                        <span class="middle">黑客竞赛</span>
+                        <span class="right">悉尼, 澳大利亚</span>
+                    </p>
+                    <h7><b>悉尼大学黑客竞赛</b></h7>
+                    <ul>
+                        <li>2025年悉尼大学黑客竞赛前三名团队</li>
+                        <li>2024年悉尼大学黑客竞赛前十名团队</li>
+                    </ul>
+
+                    <div class="work-entry"></div>
+                    <!-- 模拟法庭 -->
+                    <p class="alignment">
+                        <span class="left">2024.12</span>
+                        <span class="middle">模拟法庭经历</span>
+                        <span class="right">悉尼, 澳大利亚</span>
+                    </p>
+                    <h7><b>悉尼大学法学院模拟法庭</b></h7>
+                    <ul>
+                        <li>参与悉尼大学法学院模拟法庭竞赛</li>
+                        <li>培养法律论证、案例分析和法庭辩护技能</li>
+                        <li>与团队成员合作进行法律研究和口头陈述策略</li>
+                    </ul>
+
+                    <!-- 体育经历 -->
+                    <h7><b>体育经历</b></h7>
                     <p class="alignment">
                         <span class="left">2017.02 - 至今</span>
                         <span class="middle">羽毛球</span>
@@ -984,6 +1222,7 @@
                         <li>2020年新西兰国家青少年队成员</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2017.02 - 至今</span>
                         <span class="middle">乒乓球</span>
@@ -997,6 +1236,7 @@
                         <li>丰盛湾乒乓球队成员</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2020.02 - 至今</span>
                         <span class="middle">排球</span>
@@ -1008,6 +1248,7 @@
                         <li>全国高中排球锦标赛前八名</li>
                     </ul>
 
+                    <div class="work-entry"></div>
                     <p class="alignment">
                         <span class="left">2017.02 - 至今</span>
                         <span class="middle">其他成就</span>
@@ -1054,18 +1295,18 @@
                         </p>
                 
                         <ul class="course-list">
-                            <li><b>数学与力学：</b>高等数学、工程力学、工程分析</li>
+                            <li><b>统计学与微积分及力学：</b>高等统计学与微积分、工程力学、工程分析</li>
                             <li><b>机电一体化：</b>机电系统设计、机电工程、机电设计</li>
                             <li><b>系统工程：</b>机械系统设计、计算机工程、专业发展</li>
                         </ul>
-                        <h3>志愿者</h3>
+                        <h3>学生组织与社会服务</h3>
 
                         <p class="alignment">
                             <span class="left">2024.10 - 至今</span>
                             <span class="middle">悉尼大学国际工程学生协会</span>
                             <span class="right">澳大利亚悉尼</span>
                         </p>
-                        <h7><b>联合创始人与外联</b></h7>
+                        <h7><b>外联部部长</b></h7>
                         <ul>
                             <li>制定协会的使命、愿景和结构，以满足国际工程学生的需求。</li>
                             <li>在全校范围内的活动和展会上代表协会。</li>
@@ -1074,9 +1315,28 @@
 
 
                     <h3 class="section-title">荣誉与奖项</h3>
-                        <h7><b>黑客竞赛</b></h7>
+                        <p class="alignment">
+                            <span class="left">2024 - 2025</span>
+                            <span class="middle">黑客竞赛</span>
+                            <span class="right">悉尼, 澳大利亚</span>
+                        </p>
+                        <h7><b>悉尼大学黑客竞赛</b></h7>
                         <ul>
                             <li>2025年悉尼大学黑客竞赛前三名团队</li>
+                            <li>2024年悉尼大学黑客竞赛前十名团队</li>
+                        </ul>
+
+                        <div class="work-entry"></div>
+                        <p class="alignment">
+                            <span class="left">2024.12</span>
+                            <span class="middle">模拟法庭经历</span>
+                            <span class="right">悉尼, 澳大利亚</span>
+                        </p>
+                        <h7><b>悉尼大学法学院模拟法庭</b></h7>
+                        <ul>
+                            <li>参与悉尼大学法学院模拟法庭竞赛</li>
+                            <li>培养法律论证、案例分析和法庭辩护技能</li>
+                            <li>与团队成员合作进行法律研究和口头陈述策略</li>
                         </ul>
                 </div>
 
@@ -1099,18 +1359,20 @@
             </p>
 
             <ul>
-                <li>Advanced Mathematics, Engineering Mechanics, Mechatronics</li>
+                <li>Advanced Statistics and Calculus, Engineering Mechanics, Mechatronics</li>
                 <li>Mechanical Systems Design, Engineering Analysis, Computing</li>
                 <li>Mechatronic Design & Engineering, Electromechanical Systems</li>
             </ul>
 
             <h3>Administration, Outreach, and Professional Service</h3>
+
+            <div class="work-entry"></div>
             <p class="alignment">
                 <span class="left">2024.10 - Present</span>
                 <span class="middle">Engineering International Students Association</span>
                 <span class="right">Sydney, Australia</span>
             </p>
-            <h7><b>Co-Founder & Outreach</h7></b>
+            <h7><b>Head of Outreach</h7></b>
             <ul>
                 <li>Developed the mission, vision, and structure of the association to address the needs of international engineering students.</li>
                 <li>Represented the association at university-wide events and fairs.</li>
@@ -1118,9 +1380,15 @@
             </ul>
 
             <h3>Honours and Awards</h3>
+            <p class="alignment">
+                <span class="left">2024 - 2025</span>
+                <span class="middle">Hackathon Competitions</span>
+                <span class="right">Sydney, Australia</span>
+            </p>
+            <h7><b>University of Sydney Hackathon</b></h7>
             <ul>
-                <h7><b>Hackathon</b></h7>
                 <li>Top 3 team in University of Sydney Hackathon competition 2025</li>
+                <li>Top 10 team in University of Sydney Hackathon competition 2024</li>
             </ul>
 
             <!--
@@ -1198,6 +1466,8 @@ html, body {
     font-family: 'Garamond', serif;
     color: #333;
     background-color: #dedede;
+    margin: 0;
+    padding: 0;
 }
 
 .resume {
@@ -1357,26 +1627,47 @@ h7 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
+.export-btn {
+    background-color: #2E8B57 !important; /* Sea green color for export button */
+    width: calc(100% - 10px) !important; /* Full width for export button */
+    margin-top: 10px !important;
+}
+
+.export-btn:hover {
+    background-color: #228B22 !important; /* Darker green on hover */
+}
+
 
 
 
 .alignment {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     font-size: 14px;
     font-weight: bold;
-    width: 100%;              /* Ensures the flex container takes full width */
+    width: 100%;
+    gap: 10px;
 }
 
-.left, .right {
-    display: inline-block;
+.left {
+    flex: 0 0 20%;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .middle {
-    text-align: center;       /* Ensures the middle section is centered */
-    margin-left: auto;        /* Pushes middle section to the center */
-    margin-right: auto;       /* Ensures it stays centered, not affected by the sides */
+    flex: 1;
+    text-align: center;
+    max-width: 60%;
+    word-wrap: break-word;
+    line-height: 1.2;
+}
+
+.right {
+    flex: 0 0 20%;
+    text-align: right;
+    white-space: nowrap;
 }
 
 .alignment1 {
@@ -1427,6 +1718,121 @@ ul li::before {
     transform: translateY(-50%);
 }
 
+/* Work Experience Entry Styling */
+.work-entry {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.work-entry:last-child {
+    border-bottom: none;
+}
+
+/* Job Title Styling */
+h7 {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+/* Alignment styling improvements */
+.alignment {
+    margin-bottom: 5px;
+}
+
+/* PDF Export Optimizations */
+@media print {
+    html, body {
+        font-family: 'Times New Roman', serif !important;
+        color: #000000 !important;
+        background: white !important;
+        background-color: white !important;
+        font-size: 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    
+    .nav-buttons {
+        display: none !important;
+    }
+    
+    .resume {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 15px !important;
+        max-width: 100% !important;
+        background: white !important;
+    }
+    
+    .profile-photo {
+        width: 80px !important;
+        height: 80px !important;
+        border: 2px solid #000000 !important;
+    }
+    
+    h1 {
+        font-size: 20px !important;
+        margin-bottom: 3px !important;
+        page-break-after: avoid;
+    }
+    
+    h3 {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+        margin-top: 12px !important;
+        page-break-after: avoid;
+        border-bottom: 1px solid #000000 !important;
+    }
+    
+    h6 {
+        font-size: 10px !important;
+        margin-top: 3px !important;
+    }
+    
+    h7 {
+        font-size: 11px !important;
+        font-weight: bold !important;
+    }
+    
+    .alignment {
+        margin-bottom: 2px !important;
+        page-break-inside: avoid;
+    }
+    
+    .work-entry {
+        margin-bottom: 12px !important;
+        padding-bottom: 8px !important;
+        page-break-inside: avoid;
+        border-bottom: 0.5px solid #cccccc !important;
+    }
+    
+    ul {
+        margin: 3px 0 8px 0 !important;
+        padding-left: 15px !important;
+    }
+    
+    ul li {
+        font-size: 10px !important;
+        margin-bottom: 1px !important;
+        line-height: 1.2 !important;
+        page-break-inside: avoid;
+    }
+    
+    p {
+        margin-bottom: 3px !important;
+        page-break-inside: avoid;
+    }
+    
+    .header-with-photo {
+        margin-bottom: 10px !important;
+        page-break-after: avoid;
+    }
+}
+
 </style>
 <script>
 
@@ -1437,6 +1843,156 @@ ul li::before {
     function showSection(section) {
         document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
         document.getElementById(section).style.display = 'block';
+    }
+
+    function exportToPDF() {
+        // Show the full resume section if not already visible
+        showSection('full');
+        
+        // Temporarily hide gray background
+        const originalBodyBg = document.body.style.backgroundColor;
+        const originalHtmlBg = document.documentElement.style.backgroundColor;
+        document.body.style.backgroundColor = 'white';
+        document.documentElement.style.backgroundColor = 'white';
+        
+        // Add PDF-specific styling
+        const pdfStyles = document.createElement('style');
+        pdfStyles.id = 'pdf-styles';
+        pdfStyles.innerHTML = `
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            html, body {
+                background: white !important;
+                background-color: white !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                height: auto !important;
+                min-height: 0 !important;
+            }
+            body {
+                background: white !important;
+            }
+            .resume {
+                box-shadow: none !important;
+                border-radius: 0 !important;
+                margin: 0 !important;
+                padding: 15px !important;
+                max-width: 100% !important;
+                background: white !important;
+                background-color: white !important;
+                width: 100% !important;
+                height: auto !important;
+                min-height: 0 !important;
+            }
+            .header-with-photo {
+                margin-bottom: 15px !important;
+            }
+            .profile-photo {
+                width: 80px !important;
+                height: 80px !important;
+            }
+            h1 {
+                font-size: 20px !important;
+                margin-bottom: 5px !important;
+            }
+            h3 {
+                font-size: 14px !important;
+                margin-bottom: 8px !important;
+                margin-top: 12px !important;
+            }
+            h6 {
+                font-size: 10px !important;
+                margin-top: 5px !important;
+            }
+            h7 {
+                font-size: 11px !important;
+            }
+            .alignment {
+                margin-bottom: 3px !important;
+            }
+            .work-entry {
+                margin-bottom: 12px !important;
+                padding-bottom: 8px !important;
+            }
+            ul {
+                margin: 3px 0 8px 0 !important;
+            }
+            ul li {
+                font-size: 10px !important;
+                margin-bottom: 1px !important;
+                line-height: 1.2 !important;
+            }
+            p {
+                margin-bottom: 3px !important;
+            }
+        `;
+        document.head.appendChild(pdfStyles);
+        
+        // Get the resume content
+        const element = document.querySelector('.resume');
+        
+        // Configure the PDF options
+        const opt = {
+            margin: [0.2, 0.2, 0.2, 0.2], // Minimal margins
+            filename: 'Qianhui_Cao_Resume.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 1.8,
+                useCORS: true,
+                letterRendering: true,
+                allowTaint: false,
+                backgroundColor: '#ffffff',
+                removeContainer: true,
+                logging: false,
+                width: element.scrollWidth,
+                height: element.scrollHeight,
+                scrollX: 0,
+                scrollY: 0
+            },
+            jsPDF: { 
+                unit: 'in', 
+                format: 'a4', 
+                orientation: 'portrait',
+                compress: true,
+                precision: 16
+            },
+            pagebreak: { 
+                mode: ['avoid-all', 'css', 'legacy'],
+                before: '.page-break-before',
+                after: '.page-break-after',
+                avoid: '.page-break-avoid'
+            }
+        };
+
+        // Show loading message
+        const exportBtn = document.querySelector('.export-btn');
+        const originalText = exportBtn.innerHTML;
+        exportBtn.innerHTML = '⏳ Generating PDF...';
+        exportBtn.disabled = true;
+
+        // Generate PDF
+        html2pdf().set(opt).from(element).save().then(() => {
+            // Reset button and remove PDF styles
+            exportBtn.innerHTML = originalText;
+            exportBtn.disabled = false;
+            document.getElementById('pdf-styles')?.remove();
+            // Restore original background
+            document.body.style.backgroundColor = originalBodyBg;
+            document.documentElement.style.backgroundColor = originalHtmlBg;
+        }).catch((error) => {
+            console.error('PDF generation failed:', error);
+            exportBtn.innerHTML = '❌ Export Failed';
+            setTimeout(() => {
+                exportBtn.innerHTML = originalText;
+                exportBtn.disabled = false;
+                document.getElementById('pdf-styles')?.remove();
+                // Restore original background
+                document.body.style.backgroundColor = originalBodyBg;
+                document.documentElement.style.backgroundColor = originalHtmlBg;
+            }, 2000);
+        });
     }
 
 </script>
